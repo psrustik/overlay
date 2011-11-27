@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+  <repo quality="experimental" status="official">
+    <name>psrustik</name>
+    <description lang="en">psrustik</description>
+    <homepage>https://github.com/psrustik/overlay</homepage>
+    <owner type="person">
+      <email>psrustik@yandex.ru</email>
+      <name>rustik</name>
+    </owner>
+    <source type="git">git://github.com/psrustik/overlay.git</source>
+    <feed>https://github.com/psrustik/overlay/commits/master.atom</feed>
+  </repo>
+</repositories>
