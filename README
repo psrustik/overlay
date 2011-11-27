@@ -4,6 +4,5 @@ Gentoo portage overlay
 2) /etc/layman/layman.cfg add overlays:
     https://raw.github.com/psrustik/overlay/master/psrustik-layman-list.xml
 3) layman -f -a psrustik
-4) eix-update 
-    or 
-   layman -s psrustik
+4) layman -s psrustik
+5) eix-update    
