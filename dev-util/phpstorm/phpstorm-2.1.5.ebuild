@@ -13,9 +13,7 @@ src_install() {
 	cd PhpStorm*/
 	insinto /opt/${PN}
 	doins -r *
-	#cp -r * "${D}/opt/${PN}/" || die "Install failed"
-	
-	#dobin /opt/${PN}/bin/PhpStorm.sh || die "Install failed"
+
 	fperms a+x /opt/${PN}/bin/PhpStorm.sh || die "Chmod failed"
 	dosym /opt/${PN}/bin/PhpStorm.sh /usr/bin/phpstorm
 
