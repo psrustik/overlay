@@ -17,7 +17,7 @@ src_install() {
 	fperms a+x /opt/${PN}/bin/PhpStorm.sh || die "Chmod failed"
 	dosym /opt/${PN}/bin/PhpStorm.sh /usr/bin/phpstorm
 
-	doicon "/opt/${PN}}bin/webide.png"
+	doicon "/opt/${PN}/bin/webide.png"
 	make_desktop_entry ${PN} "PHP Storm" "/opt/${PN}/bin/webide.png"
 }
 pkg_postinst() {

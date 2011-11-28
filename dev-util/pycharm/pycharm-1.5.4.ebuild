@@ -16,7 +16,7 @@ src_install() {
 	fperms a+x /opt/${PN}/bin/pycharm.sh || die "fperms failed"
 	dosym /opt/${PN}/bin/pycharm.sh /usr/bin/pycharm
 
-	doicon "/opt/${PN}}bin/PyCharm_32.png"
+	doicon "/opt/${PN}/bin/PyCharm_32.png"
 	make_desktop_entry ${PN} "PyCharm" "/opt/${PN}/bin/PyCharm_32.png"
 }
 pkg_postinst() {
