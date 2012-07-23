@@ -1,12 +1,13 @@
+EAPI="4"
 inherit eutils
 DESCRIPTION="PhpStorm"
 HOMEPAGE="www.jetbrains.com/phpstorm/"
 SRC_URI="http://download.jetbrains.com/webide/PhpStorm-${PV}.tar.gz"
 KEYWORDS="x86 amd64"
-DEPEND="dev-java/sun-jdk"
+DEPEND="virtual/jdk"
 RDEPEND="${DEPEND}"
 SLOT="0"
-EAPI="2"
+
 src_install() {	
 	dodir /opt/${PN}
 	
