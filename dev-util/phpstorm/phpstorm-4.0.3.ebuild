@@ -7,10 +7,11 @@ KEYWORDS="x86 amd64"
 DEPEND="virtual/jdk"
 RDEPEND="${DEPEND}"
 SLOT="0"
+S=${WORKDIR}
 
-src_install() {	
+src_install() {
 	dodir /opt/${PN}
-	
+
 	cd PhpStorm*/
 	insinto /opt/${PN}
 	doins -r *
