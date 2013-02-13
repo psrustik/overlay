@@ -1,14 +1,13 @@
-#http://download.jetbrains.com/python/pycharm-1.5.4.tar.gz
+EAPI=4
 inherit eutils
 DESCRIPTION="PyCharm"
 HOMEPAGE="www.jetbrains.com/pycharm/"
 SRC_URI="http://download.jetbrains.com/python/pycharm-${PV}.tar.gz"
 KEYWORDS="x86 amd64"
-DEPEND="dev-java/sun-jdk"
+DEPEND="virtual/jdk"
 RDEPEND="${DEPEND}"
 SLOT="0"
-EAPI="2"
-src_install() {	
+src_install() {
 	dodir /opt/${PN}
 	
 	insinto /opt/${PN}
@@ -16,8 +15,8 @@ src_install() {
 	fperms a+x /opt/${PN}/bin/pycharm.sh || die "fperms failed"
 	dosym /opt/${PN}/bin/pycharm.sh /usr/bin/pycharm
 
-	doicon "/opt/${PN}/bin/PyCharm_32.png"
-	make_desktop_entry ${PN} "PyCharm" "/opt/${PN}/bin/PyCharm_32.png"
+	doicon "bin/pycharm.png"
+	make_desktop_entry ${PN} "PyCharm" "/opt/${PN}/bin/pycharm.png"
 }
 pkg_postinst() {
     elog "Run /usr/bin/pycharm"
