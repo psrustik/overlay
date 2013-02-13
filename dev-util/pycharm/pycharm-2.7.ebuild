@@ -12,7 +12,12 @@ src_install() {
 	
 	insinto /opt/${PN}
 	doins -r *
-	fperms a+x /opt/${PN}/bin/pycharm.sh || die "fperms failed"
+	fperms a+x /opt/${PN}/bin/pycharm.sh 
+	fperms a+x /opt/${PN}/bin/fsnotifier
+	fperms a+x /opt/${PN}/bin/fsnotifier64
+	fperms a+x /opt/${PN}/bin/inspect.sh
+
+
 	dosym /opt/${PN}/bin/pycharm.sh /usr/bin/pycharm
 
 	doicon "bin/pycharm.png"
